@@ -14,8 +14,8 @@ const upload = multer({
 
 const router = express.Router();
 
-router.post('/summarize-text', summarizeTextHandler);
-router.post('/summarize-file', upload.single('file'), summarizeFileHandler);
+router.post('/summarize-text', summarizeText);
+router.post('/summarize-file', upload.single('file'), summarizeFile);
 router.get('/', getHistoryHandler);
 router.delete('/:id', deleteSummaryHandler);
 

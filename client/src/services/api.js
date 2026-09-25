@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://docsummarizer-backend.onrender.com',
+  baseURL: 'https://docsummarizer-backend.onrender.com/api/summaries',
 });
 
 
