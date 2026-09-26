@@ -1,10 +1,10 @@
 import express from 'express';
 import multer from 'multer';
 import {
-  summarizeTextHandler,
-  summarizeFileHandler,
-  getHistoryHandler,
-  deleteSummaryHandler,
+  summarizeText,
+  summarizeFile,
+  getHistory,
+  deleteSummary
 } from '../controllers/summaryController.js';
 
 const upload = multer({
