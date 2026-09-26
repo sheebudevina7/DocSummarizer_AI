@@ -1,10 +1,10 @@
 import express from 'express';
 import multer from 'multer';
 import {
-  summarizeText,
-  summarizeFile,
-  getHistory,
-  deleteSummary
+  summarizeTextHandler,
+  summarizeFileHandler,
+  getHistoryHandler,
+  deleteSummaryHandler
 } from '../controllers/summaryController.js';
 
 const upload = multer({
@@ -14,9 +14,9 @@ const upload = multer({
 
 const router = express.Router();
 
-router.post('/summarize-text', summarizeText);
-router.post('/summarize-file', upload.single('file'), summarizeFile);
-router.get('/', getHistoryHandler);
+router.post('/summarize-text', summarizeTextHandler);
+router.post('/summarize-file', upload.single('file'), summarizeFileHandler);
+router.get('/history', getHistoryHandler);
 router.delete('/:id', deleteSummaryHandler);
 
 export default router;
